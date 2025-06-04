@@ -1,0 +1,14 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+yaml 
+trigger: 
+- main 
+pool: 
+vmImage: 'ubuntu-latest' 
+steps: 
+- task: Maven@3 
+inputs: 
+mavenPomFile: 'pom.xml' 
+goals: 'clean package' 
+javaHomeOption: 'JDKVersion' 
+jdkVersionOption: '1.11' 
